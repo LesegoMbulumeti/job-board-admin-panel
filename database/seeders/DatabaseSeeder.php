@@ -18,6 +18,15 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            
         ]);
+
+        //Register other seeders
+        $this->call([
+        JobPostsSeeder::class,
+        ]);
+        
+          
+
     }
 }
